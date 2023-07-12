@@ -1,0 +1,34 @@
+<h1>Editar Apresentação</h1>
+<form action="/apresentacaoEdit/{{id}}" method="post">
+    <div class="form-group">
+        <label for="campoNomeMusica">Nome da Música</label>
+        <input type="text" class="form-control" id="campoNomeMusica" name="nomeMusica" value="{{nomeMusica}}">
+    </div>
+    <div class="form-group">
+        <label for="campoParticipanteUm">Participante 1</label>
+        <input type="text" class="form-control" id="campoParticipanteUm" name="participante_um" value="{{participante_um}}">
+    </div>
+    <div class="form-group">
+        <label for="campoParticipanteDois">Participante 2</label>
+        <input type="text" class="form-control" id="campoParticipanteDois" name="participante_dois" value="{{participante_dois}}">
+    </div>
+    <div class="form-group">
+        <label for="campoParticipanteTres">Participante 3</label>
+        <input type="text" class="form-control" id="campoParticipanteTres" name="participante_tres" value="{{participante_tres}}">
+    </div>
+    <div class="form-group">
+        <label for="campoParticipanteQuatro">Participante 4</label>
+        <input type="text" class="form-control" id="campoParticipanteQuatro" name="participante_quatro" value="{{participante_quatro}}">
+    </div>
+    <div class="form-group">
+        <label for="campoParticipanteCinco">Participante 5</label>
+        <input type="text" class="form-control" id="campoParticipanteCinco" name="participante_cinco" value="{{participante_cinco}}">
+    </div>
+    <!--
+    <div class="form-group">
+        <label for="campoTotalVotos">Total de Votos</label>
+        <input type="number" class="form-control" id="campoTotalVotos" name="totalVotos" value="{{totalVotos}}">
+    </div>
+    -->
+    <input type="submit" class="btn btn-dark" value="Salvar">
+</form>

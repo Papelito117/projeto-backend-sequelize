@@ -1,0 +1,36 @@
+<h1>Lista de Apresentações</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome da Música</th>
+            <th scope="col">Participante 1</th>
+            <th scope="col">Participante 2</th>
+            <th scope="col">Participante 3</th>
+            <th scope="col">Participante 4</th>
+            <th scope="col">Participante 5</th>
+            <th scope="col">Total de Votos</th>
+            <th scope="col">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each apresentacoes}}
+        <tr>
+            <th scope="row">{{id}}</th>
+            <td>{{nomeMusica}}</td>
+            <td>{{participante_um}}</td>
+            <td>{{participante_dois}}</td>
+            <td>{{participante_tres}}</td>
+            <td>{{participante_quatro}}</td>
+            <td>{{participante_cinco}}</td>
+            <td>{{totalVotos}}</td>
+            <td>
+                <a href="/apresentacaoEdit/{{id}}" class="btn btn-primary">Editar</a>
+                <form action="/apresentacaoDelete/{{id}}" method="POST">
+                    <button class="btn btn-danger" type="submit">Excluir</button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

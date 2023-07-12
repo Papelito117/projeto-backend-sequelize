@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <form action="/login" method="POST" class="col-auto">
+        <div class="input-group input-group-sm col-2">
+            <input type="text" class="form-control" required placeholder="Matrícula/Login" id="campoLogin" name="login">
+        </div>
+        <br>
+        <div class="input-group input-group-sm col-2">
+            <input type="password" class="form-control" required placeholder="Senha" id="campoSenha" name="senha">
+        </div>
+        <br>
+        <div class="form-group">
+            <button type="submit" class="btn btn-secondary">Logar</button>
+        </div>
+    </form>
+
+    <br>
+
+    <a href="/usuarioCreate" class="btn btn-secondary">Cadastrar</a>
+
+    <script>
+        function recuperarSenha() {
+            var campoLogin = document.getElementById("campoLogin").value;
+
+            if (campoLogin.length === 0) {
+                alert("Campo 'Matrícula' é obrigatório!");
+                document.getElementById("campoLogin").focus();
+            } else {
+                window.location.href = "/recuperaSenha/" + campoLogin;
+            }
+        }
+    </script>
+
+    <button onclick="recuperarSenha()" class="btn btn-secondary">Recuperar Senha</button>
+</body>
+
+</html>

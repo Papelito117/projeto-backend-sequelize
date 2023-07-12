@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lista de Votações</title>
+</head>
+
+<body>
+  {{#if mostrarApresentacoes}}
+  <h1>Lista de Votações </h1>
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col"> ID da Apresentação: </th>
+        <th scope="col"> Nome da Música: </th>
+        <th scope="col"> Ações: </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each apresentacoes}}
+      <tr>
+        <th scope="row">{{this.id}}</th>
+        <th scope="row">{{this.nomeMusica}}</th>
+        <td>
+          <form action="/votar" method="POST">
+            <input hidden type="number" name="id" value="{{this.id}}">
+            <input hidden type="number" name="voto" value="1">
+
+            <button class="btn btn-primary" type="submit">Votar</button>
+          </form>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{/if}}
+</body>
+
+</html>

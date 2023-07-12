@@ -1,0 +1,15 @@
+{{#if votacaoAberta}}
+<h1>Encerrar Votação</h1>
+<p>A votação está aberta</p>
+<form action="/encerrarVotacao" method="POST">
+  <input type="hidden" name="votacaoId" value="{{votacaoId}}">
+  <button type="submit" class="btn btn-danger">Encerrar Votação</button>
+</form>
+{{else}}
+<h1>Abrir Votação</h1>
+<p>A votação está fechada</p>
+<form action="/abrirVotacao" method="POST">
+  <input type="hidden" name="aberto" value="1">
+  <button type="submit" class="btn btn-primary">Abrir Votação</button>
+</form>
+{{/if}}
